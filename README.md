@@ -1,5 +1,6 @@
 # CSS Light Bulb
 Light Bulb Lamp made with pure CSS, no images
+Watch Demo to see both Flat and Shadowed versions
 
 #Demo
 [Watch demo](http://anton.temchenko.com.ua/dev/css-light-bulb/)
