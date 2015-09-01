@@ -66,6 +66,33 @@ nav {
     cursor: pointer;
 }
 
+.lamp .shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    display: block;
+    width: 80px;
+    height: 60px;
+    background: rgba(0,0,0,.4);
+    border-radius: 100px;
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -ms-filter: blur(25px);
+    -o-filter: blur(25px);
+    filter: blur(25px);
+    -webkit-transform: rotate3d(1, 0, 0, 80deg);
+    -moz-transform: rotate3d(1, 0, 0, 80deg);
+    -ms-transform: rotate3d(1, 0, 0, 80deg);
+    -o-transform: rotate3d(1, 0, 0, 80deg);
+    transform: rotate3d(1, 0, 0, 80deg);
+    opacity: 1;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
 .lamp div:first-child {
     width: 100px;
     height: 100px;
@@ -185,6 +212,15 @@ body.turn a:hover, body.turn a.active {
     border-top-color: #ccc;
 }
 
+.lamp.flat .shadow {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+    background: rgba(0,0,0,.2);
+}
+
 .turn .lamp div:first-child {
     background: #FFFF35;
     -webkit-box-shadow: 1px 1px 200px 10px rgba(255,255,50,0.5);
@@ -205,6 +241,10 @@ body.turn a:hover, body.turn a.active {
 
 .turn .lamp div:first-child:before {
     border-top-color: #FFFF35;
+}
+
+.turn .lamp .shadow {
+    opacity: 0;
 }
 
 .lamp.flat div:first-child, .lamp.flat div:last-child, .lamp.flat div:last-child:before, .lamp.flat div:last-child:after {
