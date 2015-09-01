@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Light Bulb</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	</head>
+	<body ng-app ng-class="{'turn' : light}">
+		<h1>CSS Light Bulb</h1>
+		<p>Click the bulb to switch the light</p>
+	    <div class="lamp" ng-click="light = !light" ng-class="{'flat': flat}">
+	        <div></div>
+	        <div></div>
+	    </div>
+	    <nav>
+	    	<a ng-click="flat = false" ng-class="{'active' : !flat}">Shadowed</a>
+	    	<a ng-click="flat = true" ng-class="{'active' : flat}">Flat</a>
+	</body>
+</html>

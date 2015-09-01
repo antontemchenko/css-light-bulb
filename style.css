@@ -1,0 +1,203 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    color: #888;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1, p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    padding-top: 30px;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 100px;
+    text-transform: uppercase;
+    padding: 16px 50px;
+    border: 2px solid #888;
+    background: none;
+    font-weight: bold;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+}
+
+a:hover, a.active {
+    background: #888;
+    color: #eee;
+}
+
+nav {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.lamp {
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.lamp div:first-child {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: #DCDCDC;
+    position: relative;
+    border-bottom-left-radius: 30px; 
+    -webkit-transform: rotateZ(-45deg);  
+    -moz-transform: rotateZ(-45deg);  
+    -ms-transform: rotateZ(-45deg);  
+    -o-transform: rotateZ(-45deg);  
+    transform: rotateZ(-45deg);    
+    -webkit-box-shadow: inset -1px -1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset -1px -1px 3px rgba(0,0,0,.2);
+    -ms-box-shadow: inset -1px -1px 3px rgba(0,0,0,.2);
+    -o-box-shadow: inset -1px -1px 3px rgba(0,0,0,.2);
+    box-shadow: inset -1px -1px 3px rgba(0,0,0,.2);
+}
+
+.lamp div:first-child:before {
+    content: '';
+    width: 94px;
+    height: 94px;
+    top: 3px;
+    left: 3px;
+    position: absolute;    
+    background: -webkit-linear-gradient(rgba(255,255,255,.6), transparent, transparent);
+    background: -moz-linear-gradient(rgba(255,255,255,.6), transparent, transparent);
+    background: -ms-linear-gradient(rgba(255,255,255,.6), transparent, transparent);
+    background: -o-linear-gradient(rgba(255,255,255,.6), transparent, transparent);
+    background: linear-gradient(rgba(255,255,255,.6), transparent, transparent);
+    border-radius: 100px;
+}
+
+.lamp div:last-child {
+    position: absolute;
+    top: 85px;
+    left: 22px;
+    background: #DCDCDC;
+    width: 55px;
+    height: 45px;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: inset -1px -4px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset -1px -4px 3px rgba(0,0,0,.2);
+    -ms-box-shadow: inset -1px -4px 3px rgba(0,0,0,.2);
+    -o-box-shadow: inset -1px -4px 3px rgba(0,0,0,.2);
+    box-shadow: inset -1px -4px 3px rgba(0,0,0,.2);
+}
+
+.lamp div:last-child:before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 7px;
+    background: #888;
+    width: 42px;
+    height: 30px;
+    border-radius: 2px;
+    border-bottom-left-radius: 17px;    
+    border-bottom-right-radius: 17px;
+    -webkit-box-shadow: inset -1px -5px 10px rgba(0,0,0,.3);
+    -moz-box-shadow: inset -1px -5px 10px rgba(0,0,0,.3);
+    -ms-box-shadow: inset -1px -5px 10px rgba(0,0,0,.3);
+    -o-box-shadow: inset -1px -5px 10px rgba(0,0,0,.3);
+    box-shadow: inset -1px -5px 10px rgba(0,0,0,.3);
+    
+}
+
+.lamp div:last-child:after {
+    content: '';
+    position: absolute;
+    top: 61px;
+    left: 13px;
+    border-top: 10px solid #444;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 10px;
+    -webkit-box-shadow: inset -1px -5px 2px rgba(0,0,0,.8);
+    -moz-box-shadow: inset -1px -5px 2px rgba(0,0,0,.8);
+    -ms-box-shadow: inset -1px -5px 2px rgba(0,0,0,.8);
+    -o-box-shadow: inset -1px -5px 2px rgba(0,0,0,.8);
+    box-shadow: inset -1px -5px 2px rgba(0,0,0,.8);
+}
+
+body.turn {
+    background: #222;
+    color: #EFEF5F;
+}
+
+body.turn a {
+    color: #EFEF5F;
+    border-color: #EFEF5F;
+}
+
+body.turn a:hover, body.turn a.active {
+    color: #222;
+    background: #EFEF5F;
+}
+
+.lamp.flat div:first-child, .lamp.flat div:last-child {
+    background: #ccc;
+}
+
+.turn .lamp div:first-child {
+    background: #FFFF35;
+    -webkit-box-shadow: inset -1px -1px 4px rgba(0,0,0,.4), 1px 1px 200px 10px rgba(255,255,50,0.5);
+    -moz-box-shadow: inset -1px -1px 4px rgba(0,0,0,.4), 1px 1px 200px 10px rgba(255,255,50,0.5);
+    -ms-box-shadow: inset -1px -1px 4px rgba(0,0,0,.4), 1px 1px 200px 10px rgba(255,255,50,0.5);
+    -o-box-shadow: inset -1px -1px 4px rgba(0,0,0,.4), 1px 1px 200px 10px rgba(255,255,50,0.5);
+    box-shadow: inset -1px -1px 4px rgba(0,0,0,.4), 1px 1px 200px 10px rgba(255,255,50,0.5);
+}
+
+.turn .lamp div:last-child {
+    background: #FFFF35;
+    -webkit-box-shadow: inset -1px -5px 5px rgba(0,0,0,.4); 
+    -moz-box-shadow: inset -1px -5px 5px rgba(0,0,0,.4); 
+    -ms-box-shadow: inset -1px -5px 5px rgba(0,0,0,.4); 
+    -o-box-shadow: inset -1px -5px 5px rgba(0,0,0,.4); 
+    box-shadow: inset -1px -5px 5px rgba(0,0,0,.4);    
+}
+
+.lamp.flat div:first-child, .lamp.flat div:last-child, .lamp.flat div:last-child:before, .lamp.flat div:last-child:after {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.lamp.flat div:first-child:before {
+    background: none;
+}
